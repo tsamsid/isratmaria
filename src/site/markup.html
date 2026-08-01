@@ -1,0 +1,278 @@
+<a href="#hero" class="skip-link">Skip to content</a>
+
+<!-- Ambient background (persists behind everything) -->
+<div id="ambient-layer" aria-hidden="true">
+  <div class="stars"></div>
+  <div class="aurora-blob b1"></div>
+  <div class="aurora-blob b2"></div>
+  <div class="aurora-blob b3"></div>
+  <div class="moon"></div>
+  <div id="fireflies-container"></div>
+  <div id="hearts-container"></div>
+</div>
+<div id="cursor-glow" aria-hidden="true"></div>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen" role="status" aria-live="polite">
+  <div class="heart-loader">
+    <svg viewBox="0 0 32 29" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#c9737d" d="M16 28.5s-13-8.35-15-16.2C-0.4 6.6 3.4 1.5 8.8 1.5c3.2 0 5.7 1.6 7.2 4 1.5-2.4 4-4 7.2-4 5.4 0 9.2 5.1 7.8 10.8C29 20.15 16 28.5 16 28.5z"/>
+    </svg>
+  </div>
+  <div id="loading-percent">0%</div>
+  <div id="loading-text">Preparing something special...</div>
+</div>
+
+<!-- WELCOME SCREEN -->
+<section id="welcome-screen" class="story-page active">
+  <div id="welcome-typing" aria-live="polite"></div>
+</section>
+
+<!-- Chapter label -->
+<div id="chapter-label" aria-hidden="true"></div>
+
+<!-- Story Navigation -->
+<nav id="story-nav" aria-label="Story navigation">
+  <div id="story-dots" aria-hidden="true"></div>
+  <div class="nav-buttons-row">
+    <button id="prev-btn" class="nav-btn is-hidden" aria-label="Previous chapter">← Previous</button>
+    <button id="next-btn" class="nav-btn" aria-label="Continue to next chapter">
+      <span class="nav-hand" aria-hidden="true">👇</span>
+      <span class="nav-main-text">Click here to see the next part</span>
+      <span class="nav-arrow-bounce" aria-hidden="true">↓</span>
+    </button>
+  </div>
+</nav>
+
+<main id="story-container">
+  <!-- HERO -->
+  <section id="hero" class="section story-page">
+    <div class="hero-title-row reveal">
+      <div class="hero-title-text">
+        <h1 class="hero-main-title">Happy Birthday<br/>Maria <span class="accent">❤️</span></h1>
+      </div>
+      <div class="hero-title-photo" id="hero-title-photo">
+        <div class="frame-glow"></div>
+        <img src="images/hero.jpg" alt="Maria" onerror="document.getElementById('hero-title-photo').classList.add('no-image')" />
+      </div>
+    </div>
+
+    <div class="hero-below-content">
+      <div class="eyebrow reveal">Happy Birthday Maria ❤️</div>
+      <h2 class="hero-heading reveal">Happy Birthday, Maria!<br/><span class="accent">(August 22nd) 🎉</span></h2>
+      <p class="hero-subheading reveal">May your smile always shine brighter than the stars.</p>
+      <p class="hero-subheading reveal" style="margin-top:6px;">Every moment with you became my favorite memory. ❤️</p>
+
+      <div class="hero-paragraph reveal">
+        <p>Once upon a time... someone extraordinary came into my life.</p>
+        <p>From the very first moment, you brought a kind of happiness I had never known before.</p>
+        <p>Your smile became my favorite view.</p>
+        <p>Your laughter became my favorite melody.</p>
+        <p>Your presence became my greatest comfort.</p>
+        <p>Maybe I'm not beside you today, and maybe I can't celebrate this special day with you in person.</p>
+        <p>But one thing will never change— my love for you.</p>
+        <p>No matter the distance between us, my heart is always with you.</p>
+        <p>Today is your special day, and I just want you to know that every moment with you is a gift I will always cherish.</p>
+        <p class="signature-line">Happy Birthday, my favorite person. ❤️</p>
+      </div>
+
+      <div class="chapter2-photo-section reveal">
+        <div class="chapter2-photo-frame">
+          <img src="images/chapter2.jpg" alt="A cherished memory" loading="lazy"
+               onerror="this.closest('.chapter2-photo-section').style.display='none'" />
+        </div>
+        <p class="chapter2-photo-caption">A memory I'll always hold close to my heart ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR TIMELINE -->
+  <section id="timeline" class="section story-page" style="min-height:auto; display:block;">
+    <div class="eyebrow reveal">Our Journey</div>
+    <h2 class="section-title reveal">A Timeline Of Us ❤️</h2>
+    <p class="section-sub reveal">Every chapter, one memory at a time.</p>
+    <div class="age-hero reveal">
+      <div class="age-hero-number" id="age-hero-number">19 Years of You &amp; 4 Years Together</div>
+      <div class="age-hero-sub">Celebrating your 19th birthday, and four beautiful years of us ❤️</div>
+    </div>
+    <div id="timeline-wrap">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="glass timeline-card">
+          <span class="timeline-tag">Where It All Began</span>
+          <p>A coaching classroom, a few stolen minutes while sir stepped out for tea, and a love that quietly grew without either of us realizing it.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="glass timeline-card">
+          <span class="timeline-tag">The Day I Couldn't Stop Looking At You</span>
+          <p>The first time I saw you in a saree, everything else disappeared. We walked through Mohammadpur and unknowingly wrote one of our favorite chapters.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="glass timeline-card">
+          <span class="timeline-tag">Our First Bike Adventure</span>
+          <p>Your first trip outside Dhaka, and I was lucky enough to be beside you — just endless roads, wind, laughter, and your beautiful smile.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="glass timeline-card">
+          <span class="timeline-tag">The River That Knows Our Story</span>
+          <p>We visited so often the boatman stopped asking our names. Some journeys end. Memories never do.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="glass timeline-card">
+          <span class="timeline-tag">The Phone Call I Always Knew</span>
+          <p>Every day after your coaching classes, my phone would ring — and our little restaurant dates quietly became the happiest chapters of my life.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="glass timeline-card">
+          <span class="timeline-tag" id="age-tag">19 Years Of You</span>
+          <p>Today, on your birthday, this story continues — with every reason, every memory, and every bit of love still written for you. ❤️</p>
+        </div>
+      </div>
+    </div>
+    <!-- Editable: swap in your own dates/titles for these milestones any time — the layout and animation keep working as-is. -->
+  </section>
+
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section story-page" style="min-height:auto; display:block;">
+    <div id="gallery-section">
+      <div id="gallery-intro">
+        <h2 class="section-title reveal">Our Beautiful Memories ❤️</h2>
+        <p class="section-sub reveal">Every picture tells a story... every story still lives inside my heart.</p>
+      </div>
+      <div id="memories-list"></div>
+    </div>
+  </section>
+
+  <!-- 22 REASONS -->
+  <section id="reasons" class="section story-page" style="min-height:auto; display:block;">
+    <div id="reasons-section">
+      <h2 class="section-title reveal">22 Reasons Why You're So Special ❤️</h2>
+      <p class="section-sub reveal">Not just words. My whole heart, written down.</p>
+      <div class="reasons-grid" id="reasons-grid"></div>
+    </div>
+  </section>
+
+  <!-- SCRATCH CARD -->
+  <section id="scratch" class="section story-page">
+    <h2 class="section-title reveal">A Little Surprise For You ✨</h2>
+    <p class="section-sub reveal">Scratch below to reveal what's hidden in my heart.</p>
+    <div class="scratch-wrap reveal">
+      <div id="scratch-message">
+        <h3>Happy Birthday, My Love. ❤️</h3>
+        <p>If you've scratched this card, then you've unlocked the truth I've been carrying in my heart all these years...</p>
+        <p>No matter how many birthdays come and go, you'll always be my favorite chapter, my safest place, and the most beautiful memory I've ever made.</p>
+        <p>Maybe life has changed us, maybe time has taken us on different paths, but one thing never changed— I still love you with all my heart.</p>
+        <p class="sm-sig">Forever and always, it's you. ❤️</p>
+      </div>
+      <canvas id="scratch-canvas"></canvas>
+      <div id="scratch-hint">✨ Scratch here ✨</div>
+    </div>
+  </section>
+
+  <!-- LOVE QUIZ -->
+  <section id="quiz" class="section story-page">
+    <h2 class="section-title reveal">Love Quiz ❤️</h2>
+    <p class="section-sub reveal" style="margin-bottom:6vh;">Let's see how well you remember us.</p>
+    <div id="quiz-section" class="reveal">
+      <div id="quiz-progress-track"><div id="quiz-progress-fill"></div></div>
+      <div id="quiz-counter"></div>
+      <div class="glass quiz-card" id="quiz-live"></div>
+      <div class="glass" id="quiz-result" style="display:none;"></div>
+    </div>
+  </section>
+
+  <!-- FINAL LETTER -->
+  <section id="final-letter" class="section story-page" style="min-height:auto; display:block;">
+    <div id="final-section">
+      <div class="eyebrow reveal">The Final Chapter</div>
+      <h2 class="section-title reveal">Some Stories Deserve a Beautiful Ending ❤️</h2>
+
+      <div id="envelope-stage" class="reveal">
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Press here to open the envelope and read the letter">
+          <div class="envelope-ribbon"></div>
+          <div class="envelope-letter-peek"></div>
+          <div class="envelope-body"></div>
+          <div class="envelope-flap"></div>
+          <div class="wax-seal">S</div>
+          <div class="envelope-hint" aria-hidden="true">Press here to read the letter <span aria-hidden="true">❤️</span></div>
+        </div>
+      </div>
+
+      <article id="letter-paper" aria-live="polite">
+        <h3>Happy Birthday, My Love. 🎂🤍</h3>
+        <p>If you're reading this, you've reached the final page of a story that will always be my favorite.</p>
+        <p>Do you remember how it all began?</p>
+        <p>Two ordinary people, a coaching classroom, a few stolen conversations while sir was out for tea, and a love that quietly grew without either of us realizing how deeply it would change our lives.</p>
+        <p>We never needed expensive dates or perfect places.</p>
+        <p>A phone call after your coaching classes, a small restaurant, long bike rides, evenings by the river, holding your hand, endless conversations, and countless laughs... those simple moments became the most precious memories of my life.</p>
+        <p>You were the first person who taught me what love truly feels like.</p>
+        <p>You showed me that love is more than just words.</p>
+        <p>You taught me the reality of life, encouraged me to work hard, and inspired me to become a better man.</p>
+        <p>Because of you, I learned that loving someone also means growing with them.</p>
+        <p>Thank you for every smile, every phone call, every little fight, every hug, and every memory.</p>
+        <p>Even ordinary days became extraordinary because you were there.</p>
+        <p>Life doesn't always go the way we imagine.</p>
+        <p>Time changes. People grow. Circumstances change.</p>
+        <p>But nothing can erase what we shared. Those memories will always remain one of the most beautiful chapters of my life.</p>
+        <p>Today, on your birthday, I pray that life gives you everything you've ever dreamed of.</p>
+        <p>May your smile never fade.</p>
+        <p>May happiness always find you.</p>
+        <p>May your heart always stay beautiful.</p>
+        <p>And if one day, years from now, you happen to remember us, I hope you remember us with a smile.</p>
+        <p>Remember our coaching days, our bike rides, our walks, our river, our restaurant dates, our silly jokes, our endless conversations, and the boy who loved you with all his heart.</p>
+        <p>No matter how much time passes, I'll always be grateful that our paths crossed.</p>
+        <p>Happy Birthday, My Love.</p>
+        <p>Thank you for becoming the most beautiful chapter of my story.</p>
+        <p>I'll always cherish every memory we created together. ❤️</p>
+        <p class="letter-sign">Forever in my heart,<br/>Samsid 🤍</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ENDING / THANK YOU -->
+  <section id="ending" class="section story-page" style="min-height:auto; display:block;">
+    <div id="ending-inner">
+      <div id="final-message" aria-live="polite"></div>
+      <div id="ending-scene">
+        <div id="ending-typed"></div>
+        <div id="ending-heart">❤️</div>
+        <div id="the-end">The End</div>
+      </div>
+
+      <div id="footer-sig">Made with Endless Love ❤️ — Samsid</div>
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" aria-label="Close">✕</button>
+  <button class="lb-nav lb-prev" aria-label="Previous photo">‹</button>
+  <img id="lightbox-img" src="" alt="" />
+  <button class="lb-nav lb-next" aria-label="Next photo">›</button>
+  <div class="lb-caption" id="lightbox-caption"></div>
+</div>
+
+<!-- Music Player -->
+<div id="music-player" class="glass">
+  <button id="music-toggle" aria-label="Toggle background music">🎵</button>
+  <input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.5" aria-label="Volume" />
+</div>
+<audio id="bg-music" src="music/birthday.mp3" loop preload="none"></audio>
+
+
+
+
+
+
